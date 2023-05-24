@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/popup.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="lockLogo">
+        <img src="assets/lock.png" alt="lock" />
+      </div>
+      <section class="settingsContainer">
+        <div class="setting">
+          <label for="digits">
+            <span>Activate Digits</span>
+            <span></span>
+          </label>
+          <input type="checkbox" id="digits" name="digits" checked />
+        </div>
+        <div class="setting">
+          <label for="specialCharacters">
+            <span>Special Characters</span>
+            <span></span>
+          </label>
+          <input
+            type="checkbox"
+            id="specialCharacters"
+            name=" specialCharacters"
+            checked
+          />
+        </div>
+        <div class="setting">
+          <label for="lowerAndUpperCharacters">
+            <span>Lower and Upper Characters</span>
+            <span></span>
+          </label>
+          <input
+            type="checkbox"
+            id="lowerAndUpperCharacters"
+            name="lowerAndUpperCharacters"
+            checked
+          />
+        </div>
+      </section>
+      <section class="characterLength">
+        <p>Password Length is <span id="characterLength">15</span></p>
+        <p>Move the slider to adjust the length</p>
+        <input
+          type="range"
+          id="characterLenghtSlider"
+          min="5"
+          max="50"
+          value="15"
+        />
+      </section>
+      <section class="generatedPassword">
+        <input type="text" id="generatedPassword" spellcheck="false" />
+        <button id="copyPassword">Copy</button>
+        <div class="confirmation">
+          <p>Password Copied</p>
+        </div>
+      </section>
+    </div>
+    <script src="scripts/popup.js"></script>
+  </body>
+</html>
